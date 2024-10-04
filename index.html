@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Map</title>
+    <!-- Mapbox GL CSS -->
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css" rel="stylesheet">
+    <!-- Mapbox Geocoder CSS -->
+    <link href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.0/mapbox-gl-geocoder.css" rel="stylesheet">
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="asssets/css/style.css">
+</head>
+
+<body>
+   
+
+    <div id="map-container">
+        <!-- Map Element -->
+        <div id="map"></div>
+        <!-- Geocoder (Search) -->
+        <div id="geocoder"></div>
+        <!-- Layer Control -->
+        <div id="menu">
+            <input id="streets-v11" type="radio" name="rtoggle" checked="checked">
+            <label for="streets-v11">Streets</label>
+            <input id="outdoors-v11" type="radio" name="rtoggle">
+            <label for="outdoors-v11">Outdoors</label>
+            <input id="satellite-v9" type="radio" name="rtoggle">
+            <label for="satellite-v9">Satellite</label>
+            <input id="light-v10" type="radio" name="rtoggle">
+            <label for="light-v10">Light</label>
+        </div>
+        <!-- Information Display -->
+        <div id="info"></div>
+        <!-- Coordinates Display -->
+        <div id="coordinates" class="coordinates"></div>
+    </div>
+
+    <!-- Turf.js for Distance Calculation -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Turf.js/6.5.0/turf.min.js"></script>
+    <!-- Mapbox GL JS -->
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js"></script>
+    <!-- Mapbox Geocoder -->
+    <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.0/mapbox-gl-geocoder.min.js"></script>
+    <!-- Custom Script -->
+    <script src="asssets/js/script.js"></script>
+</body>
+
+</html>

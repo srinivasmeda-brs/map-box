@@ -1,0 +1,113 @@
+/* General Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    color: #333;
+    text-align: center;
+}
+
+header {
+    background-color: var(--primary-color, #1A4B84);
+    padding: 20px;
+    color: #fff;
+}
+
+h1 {
+    font-size: 24px;
+}
+
+#map-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    
+}
+
+/* Map and Geocoder */
+#map {
+    width: 80%;
+    height: 500px;
+    border-radius: 10px;
+    border: 2px solid #ccc;
+    margin-bottom: 20px;
+}
+
+#geocoder {
+    width: 80%;
+    margin-bottom: 20px;
+}
+
+/* Layer Menu Styling */
+#menu {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+#menu input {
+    display: none;
+}
+
+#menu label {
+    background-color: var(--primary-color, #1A4B84);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#menu input:checked + label {
+    background-color: #f4f4f4;
+    color: var(--primary-color, #1A4B84);
+    border: 2px solid var(--primary-color, #1A4B84);
+}
+
+/* Information Display */
+#info {
+    width: 80%;
+    text-align: left;
+    margin-top: 10px;
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+/* Coordinates Display */
+.coordinates {
+    background-color: white;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 10px;
+    display: none;
+    width: 80%;
+    text-align: left;
+}
+
+@media (max-width: 768px) {
+    #map {
+        width: 100%;
+    }
+
+    #geocoder {
+        width: 100%;
+    }
+
+    #menu {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    #info,
+    .coordinates {
+        width: 100%;
+    }
+}
